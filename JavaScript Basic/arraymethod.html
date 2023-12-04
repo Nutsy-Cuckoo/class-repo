@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+
+    <h2 id="join"></h2>
+
+    <h3 id="sort"></h3>
+    <h3 id="rev"></h3>
+
+    <script>
+
+        const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+        let flen = fruits.length;
+
+        //prints the array of string without any comma
+        for (let i = 0; i < flen; i++) {
+            document.write(fruits[i]);
+        }
+
+        //toString method: converts an array to string of(comma separated) array values
+        document.getElementById('demo').innerHTML=fruits.toString();
+
+        //join method: similar to toString method but we can specify/choose the separator
+        document.getElementById('join').innerHTML=fruits.join("/");
+
+        /*concat() method: creates a new array by merging existing array to the concat()
+        method does not change the existing arrays. It always returns a new array.*/
+        const arr1 = ['Hello','Hi'];
+        const arr2 = [1,2,3];
+        const arr3 = arr1.concat(arr2);
+        document.write('<br><br>');
+        document.write(arr3);
+
+        //slice() method: divides an array into new array
+        const sli = fruits.slice(0);
+        document.write('<br><br>');
+        document.write(sli);
+
+        //sort() method: display the elements in ascending order
+        document.getElementById('sort').innerHTML = fruits.sort();
+        document.write('<br><br>');
+        document.write(fruits.sort());
+
+        //reverse order
+        document.getElementById('rev').innerHTML = fruits.reverse();
+        document.write('<br><br>');
+        document.write(fruits.reverse());
+
+    </script>
+
+</body>
+
+</html>
